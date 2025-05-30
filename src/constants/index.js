@@ -1,0 +1,42 @@
+export const products = [
+{
+    id: 1,
+    name: 'PlayStation 5',
+    price: 499,
+    colors: ['White', 'Black'],
+    sizes: ['Disc Version', 'Digital Edition'],
+    image: '/images/ps5.jpg',
+},
+{
+    id: 2,
+    name: 'Xbox Series X',
+    price: 499,
+    colors: ['Black'],
+    sizes: ['Standard'],
+    image: '/images/xbox.jpg',
+},
+{
+    id: 3,
+    name: 'Nintendo Switch',
+    price: 299,
+    colors: ['Neon Red/Blue', 'Gray'],
+    sizes: ['Standard', 'OLED Model'],
+    image: '/images/switch.jpg',
+},
+{
+    id: 4,
+    name: 'Gaming Headset',
+    price: 99,
+    colors: ['Black', 'White', 'Blue'],
+    sizes: ['Wired', 'Wireless'],
+    image: '/images/headset.jpg',
+},
+{
+    id: 5,
+    name: 'Pro Controller',
+    price: 69,
+    colors: ['Black', 'White'],
+    sizes: ['Standard', 'Limited Edition'],
+    image: '/images/controller.jpg',
+},
+  ];
