@@ -19,33 +19,33 @@ function App() {
           
           {/* Customer Routes */}
           <Route path="/customer-home" element={
-            <ProtectedRoute allowedRoles={['customer']}>
+            <ProtectedRoute allowedRoles={['customer', 'admin']}>
               <Customer />
             </ProtectedRoute>
           } />
 
           <Route path="/cart" element={
-            <ProtectedRoute allowedRoles={['customer']}>
+            <ProtectedRoute allowedRoles={['customer', 'admin']}>
               <CartPage />
             </ProtectedRoute>
           } />
 
           <Route path="/product/:id" element={
-            <ProtectedRoute allowedRoles={['customer']}>
+            <ProtectedRoute allowedRoles={['customer', 'admin']}>
               <ProductDetail />
             </ProtectedRoute>
           } />
 
           {/* Admin Routes */}
           <Route path="/admin" element={
-            <ProtectedRoute allowedRoles={['admin']}>
+            <ProtectedRoute allowedRoles={['admin', 'admin']}>
               <Admin />
             </ProtectedRoute>
           } />
 
           {/* Rider Routes */}
           <Route path="/rider" element={
-            <ProtectedRoute allowedRoles={['rider']}>
+            <ProtectedRoute allowedRoles={['rider', 'admin']}>
               <Rider />
             </ProtectedRoute>
           } />
