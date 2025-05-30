@@ -13,28 +13,25 @@ function App() {
   return (
     <main>
       <header>
-        
+      <Navbar />
         <Routes>
           <Route path="/" element={<SignIn />} />
           
           {/* Customer Routes */}
           <Route path="/customer-home" element={
             <ProtectedRoute allowedRoles={['customer']}>
-              <Navbar />
               <Customer />
             </ProtectedRoute>
           } />
 
           <Route path="/cart" element={
             <ProtectedRoute allowedRoles={['customer']}>
-              <Navbar />
               <CartPage />
             </ProtectedRoute>
           } />
 
           <Route path="/product/:id" element={
             <ProtectedRoute allowedRoles={['customer']}>
-              <Navbar />
               <ProductDetail />
             </ProtectedRoute>
           } />
