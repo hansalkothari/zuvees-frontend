@@ -7,7 +7,7 @@ export default function GoogleLoginButton() {
     const idToken = credentialResponse.credential;
     try {
       const res = await axios.post(
-        'http://localhost:3000/api/auth/verify',
+        'https://zuvees-backend-l2o0.onrender.com/api/auth/verify',
         { idToken },
         { withCredentials: true }  // Only needed if your backend sets cookies
       );

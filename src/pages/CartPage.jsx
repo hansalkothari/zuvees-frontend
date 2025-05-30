@@ -16,7 +16,7 @@ export default function CartPage() {
     async function fetchCart() {
       try {
         setLoading(true);
-        const res = await axios.get(`http://localhost:3000/api/cart/${userEmail}`);
+        const res = await axios.get(`https://zuvees-backend-l2o0.onrender.com/api/cart/${userEmail}`);
         setCartItems(res.data.cart);
       } catch {
         setError('Failed to load cart');
@@ -45,7 +45,7 @@ export default function CartPage() {
       return;
     }
     try {
-      const res = await axios.post('http://localhost:3000/api/orders/create', {
+      const res = await axios.post('https://zuvees-backend-l2o0.onrender.com/api/orders/create', {
         email: userEmail,
         contactNumber,
         address,

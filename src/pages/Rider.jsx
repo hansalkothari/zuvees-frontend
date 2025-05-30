@@ -15,7 +15,7 @@ export default function RiderDashboard() {
     async function fetchOrders() {
       try {
         setLoading(true);
-        const res = await axios.get(`http://localhost:3000/api/rider/orders/${email}`);
+        const res = await axios.get(`https://zuvees-backend-l2o0.onrender.com/api/rider/orders/${email}`);
         setOrders(res.data.orders);
         setRider({ email });
       } catch (err) {
@@ -30,7 +30,7 @@ export default function RiderDashboard() {
 
   const updateOrderStatus = async (orderId, newStatus) => {
     try {
-      await axios.patch(`http://localhost:3000/api/admin/orders/${orderId}`, { status: newStatus });
+      await axios.patch(`https://zuvees-backend-l2o0.onrender.com/api/admin/orders/${orderId}`, { status: newStatus });
       setOrders(prev =>
         prev.map(order =>
           order._id === orderId ? { ...order, status: newStatus } : order

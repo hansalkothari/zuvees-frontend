@@ -17,8 +17,8 @@ export default function Admin() {
       try {
         setLoading(true);
         const [ordersRes, ridersRes] = await Promise.all([
-          axios.get('http://localhost:3000/api/admin/orders'),
-          axios.get('http://localhost:3000/api/admin/riders')
+          axios.get('https://zuvees-backend-l2o0.onrender.com/api/admin/orders'),
+          axios.get('https://zuvees-backend-l2o0.onrender.com/api/admin/riders')
         ]);
         setOrders(ordersRes.data.orders);
         setRiders(ridersRes.data.riders);
@@ -38,7 +38,7 @@ export default function Admin() {
         alert('Please assign a rider after marking the order as shipped.');
       }
 
-      await axios.patch(`http://localhost:3000/api/admin/orders/${orderId}`, updates);
+      await axios.patch(`https://zuvees-backend-l2o0.onrender.com/api/admin/orders/${orderId}`, updates);
       setOrders(prev =>
         prev.map(order =>
           order._id === orderId ? { ...order, ...updates } : order

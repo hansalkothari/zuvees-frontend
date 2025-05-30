@@ -12,7 +12,7 @@ export default function ProductDetail() {
   const handleAddToCart = async () => {
     const email = localStorage.getItem('email'); 
     try {
-      await axios.post('http://localhost:3000/api/cart/add', {
+      await axios.post('https://zuvees-backend-l2o0.onrender.com/api/cart/add', {
         email,
         productId: product.id,
         selectedColor,
